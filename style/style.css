@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'RR';
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #8d8d8d77;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f03a1693;
+    border-radius: 10px;
+}
+
+header {
+    max-height: 414px;
+    height: 100%;
+}
+
+.header-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-left h1 {
+    color: #000000;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'RB';
+    text-transform: uppercase;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right a {
+    margin-left: 15px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3A3838;
+    font-family: 'RB';
+    text-transform: uppercase;
+    transition: 300ms;
+}
+
+.header-right a:hover {
+    color: #EF4423;
+}
+
+.header-bottom {
+    flex-grow: 1;
+    margin-top: 15px;
+}
+
+.header-bottom img {
+    width: 100%;
+}
+
+.main-box {
+    display: flex;
+}
+
+.main-box-item {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item1 {
+    background: #B71C1C;
+    padding-bottom: 15px;
+}
+
+.item2 {
+    background: #6A1B9A;
+    padding-top: 15px;
+}
+
+.item3 {
+    background: #303F9F;
+    padding-bottom: 15px;
+}
+
+.item4 {
+    background: #00695C;
+    padding-top: 15px;
+}
+
+.main-box-item img {
+    width: 100%;
+}
+
+.main-box-item h2 {
+    font-size: 19px;
+    line-height: 22px;
+    color: #FFFFFF;
+    font-family: 'RB';
+    padding: 0 15px;
+}
+
+.main-box-item p {
+    font-size: 16px;
+    line-height: 19px;
+    color: #EBEBEB;
+    padding: 0 15px;
+}
+
+.title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 22px;
+    line-height: 26px;
+    color: #3A3838;
+}
+
+.main-info-bg {
+    background: #EDEDED;
+}
+
+.main-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.left-info {
+    max-width: 555px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-img {
+    width: 100%;
+}
+
+.right-info {
+    max-width: 555px;
+    width: 100%;
+}
+
+.right-info h2 {
+    font-size: 22px;
+    line-height: 26px;
+    color: #3A3838;
+    margin-top: 20px;
+    font-family: 'RB';
+}
+
+.right-info p {
+    font-size: 18px;
+    line-height: 21px;
+    color: #686868;
+    margin: 30px 0; 
+}
+
+footer {
+    background: #3A3838;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 28px 0;
+}
+
+.footer-left h2 {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'RB';
+    text-transform: uppercase;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-right a {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'RB';   
+    margin-left: 15px;
+    transition: 300ms;
+    text-transform: uppercase;
+}
+
+.footer-right a:hover {
+    color: #EF4423;
+}
+
+@media(max-width:1140px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-box {
+        flex-direction: column-reverse;
+    }
+    .main-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:700px) {
+    .header-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-box-item {
+        width: 50%;
+    }
+    .main-box {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width:420px) {
+    .main-box-item {
+        width: 100%;
+        row-gap: 10px;
+    }
+    .item1, .item3 {
+        flex-direction: column-reverse; 
+    }
+    
+    .item1 h2, .item3 h2 {
+        order: 2;
+    }
+    
+    .item1, .item2, .item3, .item4 {
+        padding-top: 5px;
+        padding-bottom: 0;
+    }
+}
